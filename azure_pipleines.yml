@@ -9,6 +9,13 @@ trigger: none
 #    include:
 #    - main
 
+parameters:
+  - name: "StorageAccountName"
+    displayName: "name of the storage account"
+    type: string
+
+
+
 steps:
 - script: echo Hello, world!
   displayName: 'Run a one-line script'
@@ -24,7 +31,7 @@ steps:
     templateLocation: 'Linked artifact'
     #csmFile: 'https://github.com/veevellanki/myrepo1/blob/main/Storageaccount.json'
     csmFile: 'Storageaccount.json'
-    overrideParameters: -StorageAccountName azurerg1234
+    overrideParameters: -${{parameters.StorageAccountName}}
     #csmParametersFile: 'https://github.com/veevellanki/myfirstdevops/blob/mydevops1/StorageAccount.parameters.json'
     deploymentMode: 'Incremental'
     deploymentName: 'mypipelinedeployment234345'
