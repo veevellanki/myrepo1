@@ -1,0 +1,42 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "StorageAccountName": {
+            "type": "string",
+            "defaultValue": "sa432345"
+        },
+        "StorageAccountTagName": {
+            "type": "string",
+            "defaultValue": "storageaccount432345"
+        },
+        "StorageSkuName": {
+            "type": "string",
+            "defaultValue": "Standard_LRS"
+        },
+        "StorageSkuTier": {
+            "type": "string",
+            "defaultValue": "Standard"
+        }
+    },
+    "variables": {
+        "StorageName": "[concat(toLower(parameters('StorageAccountName')),uniqueString(resourceGroup().id))]"
+    },
+    "resources": [
+        {
+            "name": "[variables('storageName')]",
+            "type": "Microsoft.Storage/storageAccounts",
+            "apiVersion": "2019-06-01",
+            "tags": {
+                "displayName": "[parameters('StorageAccountTagName')]"
+            },
+            "location": "[resourceGroup().location]",
+            "kind": "StorageV2",
+            "sku": {
+                "name": "[parameters('StorageSkuName')]",
+                "tier": "[parameters('StorageSkuTier')]"
+            }
+        }
+    ],
+    "outputs": {}
+}
