@@ -24,8 +24,9 @@ steps:
     templateLocation: 'Linked artifact'
     #csmFile: 'https://github.com/veevellanki/myrepo1/blob/main/Storageaccount.json'
     csmFile: 'Storageaccount.json'
+    overrideParameters: -storageAcctName azurerg1234
     #csmParametersFile: 'https://github.com/veevellanki/myfirstdevops/blob/mydevops1/StorageAccount.parameters.json'
     deploymentMode: 'Incremental'
     deploymentName: 'mypipelinedeployment234345'
     addSpnToEnvironment: true
-  
+
