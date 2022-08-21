@@ -22,4 +22,4 @@ jobs:
 - job: helloworld
   steps:
 
-    - script: echo "Hello, $(name)"
+    - script: echo "Hello,  Welcome $(name)"
