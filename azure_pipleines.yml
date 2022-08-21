@@ -31,7 +31,7 @@ steps:
     templateLocation: 'Linked artifact'
     #csmFile: 'https://github.com/veevellanki/myrepo1/blob/main/Storageaccount.json'
     csmFile: 'Storageaccount.json'
-    overrideParameters: -${{parameters.StorageAccountName}}
+    overrideParameters: -StorageAccountName ${{parameters.StorageAccountName}}
     #csmParametersFile: 'https://github.com/veevellanki/myfirstdevops/blob/mydevops1/StorageAccount.parameters.json'
     deploymentMode: 'Incremental'
     deploymentName: 'mypipelinedeployment234345'
