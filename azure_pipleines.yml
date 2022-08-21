@@ -15,13 +15,6 @@ variables:
 pool:
   vmImage: ubuntu-latest
 
-jobs:
-
-- job: helloworld
-  steps:
-
-    - script: echo "Hello,  Welcome $(name)"
-
 stages:
 
 - stage: Build
