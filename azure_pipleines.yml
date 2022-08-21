@@ -22,9 +22,9 @@ steps:
     resourceGroupName: 'mydevops'
     location: 'East US 2'
     templateLocation: 'Linked artifact'
-    csmFile: 'https://github.com/veevellanki/myfirstdevops/blob/mydevops1/StorageAccount.json'
+    csmFile: 'https://github.com/veevellanki/myrepo1/blob/main/Storageaccount.json'
     #csmParametersFile: 'https://github.com/veevellanki/myfirstdevops/blob/mydevops1/StorageAccount.parameters.json'
     deploymentMode: 'Incremental'
-    deploymentName: 'mypipelinedeployment1'
+    deploymentName: 'mypipelinedeployment234345'
     addSpnToEnvironment: true
   
