@@ -1,9 +1,7 @@
 name: 1.0$(Rev:.r)
 
 # simplified trigger (implied branch)
-trigger:
-
-- main
+trigger: none
 
 # equivalents trigger
 # trigger:
